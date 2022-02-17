@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head x-data="{ isOpen: false }">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <link rel="stylesheet" type="text/css" href="../../public/build/tailwind.css">
+</head>
+
+<body class="bg-slate-900 h-screen">
+    <div class="z-10 fixed bottom-5 right-2">
+        <a href="../index.html"
+            class="text-white p-4 w-auto h-10 bg-red-600 rounded-full hover:bg-red-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none">
+            Back to index
+        </a>
+    </div>
+    <div class="relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="#">
+                        <span class="sr-only">Workflow</span>
+                        <img class="h-8 w-auto sm:h-10"
+                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                    </a>
+                </div>
+                <div class="-mr-2 -my-2 md:hidden">
+                    <button type="button"
+                        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        aria-expanded="false">
+                        <span class="sr-only">Open menu</span>
+                        <!-- Heroicon name: outline/menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
+                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
+                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
+                </nav>
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign
+                        in </a>
+                    <a href="#"
+                        class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Sign up </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
