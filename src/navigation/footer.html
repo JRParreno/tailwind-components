@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head x-data="{ isOpen: false }">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <link rel="stylesheet" type="text/css" href="../../public/build/tailwind.css">
+</head>
+
+<body class="bg-gray-100 h-screen">
+    <div class="z-10 fixed bottom-5 right-2">
+        <a href="../index.html"
+            class="text-white p-4 w-auto h-10 bg-red-600 rounded-full hover:bg-red-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none">
+            Back to index
+        </a>
+    </div>
+    <div class="relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="#">
+                        <span class="sr-only">Workflow</span>
+                        <img class="h-8 w-auto sm:h-10"
+                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                    </a>
+                </div>
+                <div class="-mr-2 -my-2 md:hidden">
+                    <button type="button" onclick="myFunction()"
+                        class="dropbtn bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        aria-expanded="false">
+                        <span class="sr-only">Open menu</span>
+                        <!-- Heroicon name: outline/menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
+                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
+                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
+                </nav>
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign
+                        in </a>
+                    <a href="#"
+                        class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Sign up </a>
+                </div>
+
+                <div id="myDropdown"
+                    class="show absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+                    <div
+                        class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                        <div class="pt-5 pb-6 px-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <img class="h-8 w-auto"
+                                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                        alt="Workflow">
+                                </div>
+                                <div class="-mr-2">
+                                    <button type="button" onclick="myFunction()"
+                                        class="dropbtn bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                        <span class="sr-only">Close menu</span>
+                                        <!-- Heroicon name: outline/x -->
+                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <nav class="grid gap-y-8">
+                                    <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                        <!-- Heroicon name: outline/chart-bar -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                        </svg>
+                                        <span class="ml-3 text-base font-medium text-gray-900"> Analytics </span>
+                                    </a>
+
+                                    <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                        <!-- Heroicon name: outline/cursor-click -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                                        </svg>
+                                        <span class="ml-3 text-base font-medium text-gray-900"> Engagement </span>
+                                    </a>
+
+                                    <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                        <!-- Heroicon name: outline/shield-check -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        </svg>
+                                        <span class="ml-3 text-base font-medium text-gray-900"> Security </span>
+                                    </a>
+
+                                    <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                        <!-- Heroicon name: outline/view-grid -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                        </svg>
+                                        <span class="ml-3 text-base font-medium text-gray-900"> Integrations </span>
+                                    </a>
+
+                                    <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                        <!-- Heroicon name: outline/refresh -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                        </svg>
+                                        <span class="ml-3 text-base font-medium text-gray-900"> Automations </span>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="py-6 px-5 space-y-6">
+                            <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+                                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Pricing
+                                </a>
+
+                                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Docs </a>
+
+                                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Help Center
+                                </a>
+
+                                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Guides </a>
+
+                                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Events </a>
+
+                                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Security
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                                    Sign up </a>
+                                <p class="mt-6 text-center text-base font-medium text-gray-500">
+                                    Existing customer?
+                                    <a href="#" class="text-indigo-600 hover:text-indigo-500"> Sign in </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-4 py-4 md:px-4 place-items-center">
+        <div class="sm:h-auto sm:w-52 md:w-72 p-5 border-4 rounded-lg">
+            <img src="https://manofmany.com/wp-content/uploads/2021/09/What-is-an-NFT-1.jpg" alt="nft image"
+                class="h-48 w-96  rounded-lg shadow-xl sm:object-cover m-auto" />
+            <h1 class="my-5 text-indigo-500 sm:text-2xl">My NFT title here</h1>
+            <div class="flex-1 box-content border-1">
+                <p class="text-gray-800">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
+        <div class="sm:h-auto sm:w-52 md:w-72 p-5 border-4 rounded-lg">
+            <img src="https://manofmany.com/wp-content/uploads/2021/09/What-is-an-NFT-1.jpg" alt="nft image"
+                class="sm:object-cover h-48 w-96  rounded-lg shadow-xl  m-auto" />
+            <h1 class="my-5 text-indigo-500 sm:text-2xl">My NFT title here</h1>
+            <div class="flex-1 box-content border-1">
+                <p class="text-gray-800">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
+        <div class="sm:h-auto sm:w-52 md:w-72 p-5 border-4 rounded-lg">
+            <img src="https://imageio.forbes.com/specials-images/imageserve/6170e01f8d7639b95a7f2eeb/Sotheby-s-NFT-Natively-Digital-1-2-sale-Bored-Ape-Yacht-Club--8817-by-Yuga-Labs/0x0.png?fit=bounds&format=png&width=960"
+                class="sm:object-cover h-48 w-96 rounded-lg shadow-xl  m-auto" />
+            <h1 class="my-5 text-indigo-500 sm:text-2xl">My NFT title here</h1>
+            <div class="flex-1 box-content border-1">
+                <p class="text-gray-800">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
+        <div class="sm:h-auto sm:w-52 md:w-72 p-5 border-4 rounded-lg">
+            <img src="https://imageio.forbes.com/specials-images/imageserve/6170e01f8d7639b95a7f2eeb/Sotheby-s-NFT-Natively-Digital-1-2-sale-Bored-Ape-Yacht-Club--8817-by-Yuga-Labs/0x0.png?fit=bounds&format=png&width=960"
+                class="sm:object-cover h-48 w-96 rounded-lg shadow-xl m-auto" />
+            <h1 class="my-5 text-indigo-500 sm:text-2xl">My NFT title here</h1>
+            <div class="flex-1 box-content border-1">
+                <p class="text-gray-800">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
+        <div class="sm:h-auto sm:w-52 md:w-72 p-5 border-4 rounded-lg">
+            <img src="https://i.gadgets360cdn.com/large/adidas_nft_bigpic_1638538502773.jpg"
+                class="h-48 w-96 w-72 rounded-lg shadow-xl sm:object-cover m-auto" />
+            <h1 class="my-5 text-indigo-500 sm:text-2xl">My NFT title here</h1>
+            <div class="flex-1 box-content border-1">
+                <p class="text-gray-800">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
+        <div class="sm:h-auto sm:w-52 md:w-72 p-5 border-4 rounded-lg">
+            <img src="https://i.gadgets360cdn.com/large/adidas_nft_bigpic_1638538502773.jpg"
+                class="h-48 w-96 w-72 rounded-lg shadow-xl sm:object-cover m-auto" />
+            <h1 class="my-5 text-indigo-500 sm:text-2xl">My NFT title here</h1>
+            <div class="flex-1 box-content border-1">
+                <p class="text-gray-800">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
+
+        <div class="h-10"></div>
+    </div>
+    <footer class="border-t border-gray-200">
+        <div class="
+            container
+            flex flex-col flex-wrap
+            px-4
+            py-16
+            mx-auto
+            md:items-center
+            lg:items-start
+            md:flex-row md:flex-nowrap
+          ">
+            <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+                <a class="
+                flex
+                items-center
+                justify-center
+                text-4xl
+                font-bold
+                text-blue-700
+                md:justify-start
+              ">
+                    Logo
+                </a>
+                <p class="mt-2 text-sm text-gray-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+                    at sequi cum, impedit fuga in placeat illo eum minima possimus est
+                    perferendis distinctio explicabo eos natus consequuntur blanditiis
+                    odio optio?
+                </p>
+            </div>
+            <div class="justify-between w-full mt-4 text-center lg:flex">
+                <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+                    <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+                        Useful Links
+                    </h2>
+                    <ul class="mb-8 space-y-2 text-sm list-none">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">About Us</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Blogs</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+                    <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+                        Useful Links
+                    </h2>
+                    <ul class="mb-8 space-y-2 text-sm list-none">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">About Us</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Blogs</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+                    <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+                        Useful Links
+                    </h2>
+                    <ul class="mb-8 space-y-2 text-sm list-none">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">About Us</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Blogs</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <p class="text-base text-gray-400">
+                All rights reserved by @MedMover 2022
+            </p>
+        </div>
+    </footer>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>
